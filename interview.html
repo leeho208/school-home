@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1:1 모의 면접연습 | 부산기계공업고등학교 취업진로센터</title>
+  <link rel="icon" type="image/png" href="images.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="interview.html">
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="images.png" alt="부산기계공업고등학교 로고" class="logo-img">
+        <div>부산기계공업고등학교<small>취업진로센터 · 3학년</small></div>
+      </a>
+      <button class="menu-btn" aria-label="메뉴">☰</button>
+      <nav class="gnav">
+        <ul>
+          <li><a href="index.html">홈</a></li>
+          <li><a href="public.html">공기업</a></li>
+          <li><a href="enterprise.html">대기업</a></li>
+          <li><a href="midsize.html">중견기업</a></li>
+          <li><a href="interview.html">면접연습</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <span class="badge">🎙️ 공기업 · 대기업 회사별 모의 면접</span>
+      <h1>1:1 모의 면접연습</h1>
+      <p>회사를 선택하면 그 기업에서 자주 묻는 인성·직무 질문으로 면접관 역할을 진행합니다. 답변을 입력하면 모범답변 포인트를 바로 알려드립니다.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="setup-panel" id="setupPanel">
+        <label>
+          면접 볼 회사 선택
+          <select id="companySelect" class="select">
+            <optgroup label="공기업 · 공공기관" data-group="공기업">
+              <option value="khnp">한국수력원자력</option>
+              <option value="kowepo">한국서부발전 등 발전본부</option>
+              <option value="kogas">한국가스공사</option>
+              <option value="kwater">한국수자원공사 (K-water)</option>
+              <option value="humetro">부산교통공사</option>
+            </optgroup>
+            <optgroup label="대기업" data-group="대기업">
+              <option value="hdhmc">HD현대중공업</option>
+              <option value="ocean">한화오션</option>
+              <option value="doosan">두산에너빌리티</option>
+              <option value="hyundai">현대자동차 · 기아</option>
+              <option value="posco">포스코</option>
+            </optgroup>
+            <optgroup label="기타" data-group="기타">
+              <option value="generic">중견기업 · 중소기업 공통</option>
+            </optgroup>
+          </select>
+        </label>
+        <label>
+          면접 유형
+          <select id="typeSelect" class="select">
+            <option value="all">전체 (인성 + 직무)</option>
+            <option value="인성">인성면접만</option>
+            <option value="직무">직무면접만</option>
+          </select>
+        </label>
+        <button class="start-btn" id="startBtn">면접 시작하기</button>
+      </div>
+
+      <div class="chat-box" id="chatBox" style="display: none;">
+        <div class="chat-head">
+          <span id="chatTitle"></span>
+          <span>진행 <span id="chatProgress"></span> <button class="end-btn" id="endBtn">종료</button></span>
+        </div>
+        <div class="chat-log" id="chatLog"></div>
+        <div class="chat-input">
+          <textarea id="answerInput" placeholder="답변을 입력하세요. Enter로 전송, Shift+Enter는 줄바꿈"></textarea>
+          <button id="sendBtn">전송</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--white);">
+    <div class="container">
+      <div class="section-title">
+        <h2>면접 답변 3대 원칙</h2>
+        <p>연습할 때마다 이 원칙을 떠올리세요</p>
+      </div>
+      <div class="tip-grid">
+        <div class="tip-card">
+          <h4>1️⃣ 결론 먼저</h4>
+          <ul>
+            <li>첫 문장에서 답의 핵심을 말하기</li>
+            <li>"저는 ○○한 사람입니다" → 이유 → 사례 순</li>
+            <li>길게 말하는 것보다 1분 안에 정리된 답이 강력</li>
+          </ul>
+        </div>
+        <div class="tip-card">
+          <h4>2️⃣ 구체적 사례</h4>
+          <ul>
+            <li>'성실합니다'가 아니라 실습·출결·동아리 사례로 증명</li>
+            <li>장비명·숫자(공차, 시간)를 넣으면 신뢰도 상승</li>
+            <li>상황 → 행동 → 결과(STAR) 구조로 말하기</li>
+          </ul>
+        </div>
+        <div class="tip-card">
+          <h4>3️⃣ 안전·기본기 어필</h4>
+          <ul>
+            <li>기계직 면접은 안전 인식이 곧 직무 이해도</li>
+            <li>보호구·점검 습관 등 기본기를 자연스럽게 언급</li>
+            <li>모르는 질문은 아니다라고 솔직히 + 알아가려는 태도</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div><b>부산기계공업고등학교 취업진로센터</b><br>모의면접 결과는 담임교사·취업지원부와 함께 복기하세요</div>
+      <div>© <span id="year"></span> Busan Mechanical Technical High School</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/interview-data.js"></script>
+  <script src="js/interview.js"></script>
+</body>
+</html>

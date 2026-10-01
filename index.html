@@ -1,330 +1,180 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>부산기계공업고등학교 | 신입생 안내</title>
-  <meta name="description" content="부산기계공업고등학교 신입생을 위한 입학 안내 홈페이지" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부산기계공업고등학교 취업진로센터</title>
+  <link rel="icon" type="image/png" href="images.png">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <defs>
-      <symbol id="gear" viewBox="-50 -50 100 100">
-        <g fill="currentColor">
-          <rect x="-7" y="-48" width="14" height="20" rx="4" />
-          <rect x="-7" y="-48" width="14" height="20" rx="4" transform="rotate(45)" />
-          <rect x="-7" y="-48" width="14" height="20" rx="4" transform="rotate(90)" />
-          <rect x="-7" y="-48" width="14" height="20" rx="4" transform="rotate(135)" />
-          <rect x="-7" y="-48" width="14" height="20" rx="4" transform="rotate(180)" />
-          <rect x="-7" y="-48" width="14" height="20" rx="4" transform="rotate(225)" />
-          <rect x="-7" y="-48" width="14" height="20" rx="4" transform="rotate(270)" />
-          <rect x="-7" y="-48" width="14" height="20" rx="4" transform="rotate(315)" />
-          <circle r="34" />
-        </g>
-        <circle r="13" fill="var(--bg-hero, #0b1c33)" />
-      </symbol>
-    </defs>
-  </svg>
+<body data-page="index">
 
-  <header class="header" id="header">
+  <header class="site-header">
     <div class="container header-inner">
-      <a href="#hero" class="brand">
-        <svg class="brand-gear" width="30" height="30" aria-hidden="true"><use href="#gear" /></svg>
-        <span class="brand-text">
-          <strong>부산기계공업고등학교</strong>
-          <small>BUSAN MECHANICAL TECHNICAL HIGH SCHOOL</small>
-        </span>
+      <a href="index.html" class="brand">
+        <img src="images.png" alt="부산기계공업고등학교 로고" class="logo-img">
+        <div>부산기계공업고등학교<small>취업진로센터 · 3학년</small></div>
       </a>
-      <nav class="nav" id="nav">
-        <a href="#about">학교 소개</a>
-        <a href="#departments">학과 안내</a>
-        <a href="#checklist">입학 준비</a>
-        <a href="#life">학교생활</a>
-        <a href="#faq">자주 묻는 질문</a>
-        <a href="#location">오시는 길</a>
+      <button class="menu-btn" aria-label="메뉴">☰</button>
+      <nav class="gnav">
+        <ul>
+          <li><a href="index.html">홈</a></li>
+          <li><a href="public.html">공기업</a></li>
+          <li><a href="enterprise.html">대기업</a></li>
+          <li><a href="midsize.html">중견기업</a></li>
+          <li><a href="interview.html">면접연습</a></li>
+        </ul>
       </nav>
-      <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </header>
 
-  <main>
-    <section class="hero" id="hero">
-      <div class="hero-gears" aria-hidden="true">
-        <svg class="gear gear-lg" width="260" height="260"><use href="#gear" /></svg>
-        <svg class="gear gear-sm" width="150" height="150"><use href="#gear" /></svg>
-        <svg class="gear gear-xs" width="90" height="90"><use href="#gear" /></svg>
-      </div>
-      <div class="container hero-inner">
-        <span class="hero-badge">2027학년도 신입생 환영</span>
-        <h1>여러분의 <em>미래</em>를 만드는 곳,<br />부산기계공업고등학교에 오신 것을 환영합니다</h1>
-        <p class="hero-sub">
-          정밀한 손기술과 창의적인 두뇌, 그리고 꿈을 향한 열정만 있다면 준비는 끝났습니다.
-          신입생 여러분을 위한 학교 소개부터 입학 준비까지 모든 안내를 한곳에 모았습니다.
-        </p>
-        <div class="hero-actions">
-          <a href="#checklist" class="btn btn-primary">입학 준비 체크리스트</a>
-          <a href="#departments" class="btn btn-ghost">학과 알아보기</a>
-        </div>
-        <ul class="hero-stats">
-          <li><strong data-count="70">0</strong><span>년 전통의 명문</span></li>
-          <li><strong data-count="4">0</strong><span>개 특성화 학과</span></li>
-          <li><strong data-count="98" data-suffix="%">0</strong><span>취업률</span></li>
-          <li><strong data-count="30" data-suffix="+">0</strong><span>운영 동아리</span></li>
-        </ul>
-      </div>
-    </section>
+  <section class="hero">
+    <div class="container">
+      <span class="badge">🎓 졸업 후 취업, 여기서 시작합니다</span>
+      <h1>기계와 취업의 모든 준비,<br>한 곳에서 정리했습니다</h1>
+      <p>공기업 · 대기업 · 중견기업, 어디로 갈지 고민 중이라면 각 경로의 채용 전형과 준비법을 비교하고 나에게 맞는 목표를 정하세요.</p>
+    </div>
+  </section>
 
-    <section class="quick section" id="quick">
-      <div class="container">
-        <div class="quick-grid">
-          <a href="#checklist" class="quick-card reveal">
-            <span class="quick-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
-            </span>
-            <strong>입학 준비 체크리스트</strong>
-            <p>등록 전 준비물을 하나씩 확인하세요</p>
-          </a>
-          <a href="#life" class="quick-card reveal">
-            <span class="quick-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm4.2 14.2L11 13V7h1.5v5.3l4.5 2.7z"/></svg>
-            </span>
-            <strong>하루 일정</strong>
-            <p>등교부터 하교까지 하루 흐름 미리보기</p>
-          </a>
-          <a href="#departments" class="quick-card reveal">
-            <span class="quick-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="m21.9 8.9-1.2-4.3a1 1 0 0 0-1-.7H4.3a1 1 0 0 0-1 .7L2.1 8.9a3.5 3.5 0 0 0 .4 2.6V19a2 2 0 0 0 2 2h15a2 2 0 0 0 2-2v-7.5a3.5 3.5 0 0 0 .4-2.6zM6.2 5.9h2.4l-.5 3.6a1.9 1.9 0 0 1-3.8.2zm7.1 0v3.8a1.9 1.9 0 0 1-3.8 0V5.9zm4.2 0 1.9 3.8a1.9 1.9 0 0 1-3.8-.2l-.5-3.6z"/></svg>
-            </span>
-            <strong>학과 소개</strong>
-            <p>기계부터 용접까지 나에게 맞는 전공 찾기</p>
-          </a>
-          <a href="#faq" class="quick-card reveal">
-            <span class="quick-ico" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 17h-2v-2h2zm2.1-7.7-.9.9c-.7.7-1.2 1.3-1.2 2.8h-2v-.5c0-1.1.5-2.1 1.2-2.8l1.2-1.3a2 2 0 1 0-3.4-1.4H8a4 4 0 1 1 7.1 2.3z"/></svg>
-            </span>
-            <strong>궁금증 해결</strong>
-            <p>신입생들이 가장 많이 묻는 질문 모음</p>
-          </a>
-        </div>
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>진로 유형 3가지</h2>
+        <p>관심 분야를 클릭하면 기업 정보 · 자격증 · 채용 전형 · 준비 체크리스트가 열립니다</p>
       </div>
-    </section>
-
-    <section class="about section" id="about">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-tag">ABOUT</span>
-          <h2>우리 학교를 소개합니다</h2>
-          <p>산학협력 중심의 특성화고로, 취업과 진학 모두 열려 있는 길을 만들어 갑니다.</p>
-        </div>
-        <div class="about-grid">
-          <div class="about-card reveal">
-            <h3>현장 중심 실습 교육</h3>
-            <p>CNC 선반, 산업용 로봇, 3D 프린터 등 최신 설비를 갖춘 실습실에서 이론과 실습을 균형 있게 배웁니다. 1학년 때는 전 공통 실습을, 2학년부터는 전공 심화 실습으로 운영됩니다.</p>
-          </div>
-          <div class="about-card reveal">
-            <h3>자격증 취득 지원</h3>
-            <p>컴퓨터응용기계제도기능사, 용접기능사, 전기기능사 등 졸업 전 최소 2개 자격증 취득을 목표로 하며, 방과후 자격증 반을 운영해 시험 응시를 지원합니다.</p>
-          </div>
-          <div class="about-card reveal">
-            <h3>취업 · 진학 로드맵</h3>
-            <p>지역 우수 기업과 연계된 산학협력을 통해 취업을 지원하고, 산업기사 특별전형과 학과별 심화 과정으로 대학 진학도 준비할 수 있습니다.</p>
-          </div>
-          <div class="about-card reveal">
-            <h3>풍부한 학교문화</h3>
-            <p>기계 제작 동아리, 드론, e스포츠, 밴드 등 30개가 넘는 동아리가 운영됩니다. 매년 열리는 기계공작 전시회와 체육대회도 빼놓을 수 없는 즐거움입니다.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="departments section" id="departments">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-tag">DEPARTMENTS</span>
-          <h2>학과 안내</h2>
-          <p>희망하는 진로에 따라 1학년 말에 진로를 선택해 배울 수 있습니다.</p>
-        </div>
-        <div class="dept-grid">
-          <article class="dept-card reveal">
-            <div class="dept-head">
-              <svg width="34" height="34" aria-hidden="true"><use href="#gear" /></svg>
-              <h3>기계과</h3>
-            </div>
-            <p>기계의 원리와 구조를 배우고 선반, 밀링 등 공작기계 가공 실습을 중심으로 제조 기술을 익힙니다.</p>
-            <ul>
-              <li>주요 자격증: 공작기계기능사</li>
-              <li>진로: 기계조립 · 생산기술 · 품질관리</li>
-            </ul>
-          </article>
-          <article class="dept-card reveal">
-            <div class="dept-head">
-              <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor" aria-hidden="true"><path d="m21.9 8.9-1.2-4.3a1 1 0 0 0-1-.7H4.3a1 1 0 0 0-1 .7L2.1 8.9a3.5 3.5 0 0 0 .4 2.6V19a2 2 0 0 0 2 2h15a2 2 0 0 0 2-2v-7.5a3.5 3.5 0 0 0 .4-2.6zM6.2 5.9h2.4l-.5 3.6a1.9 1.9 0 0 1-3.8.2zm7.1 0v3.8a1.9 1.9 0 0 1-3.8 0V5.9zm4.2 0 1.9 3.8a1.9 1.9 0 0 1-3.8-.2l-.5-3.6z"/></svg>
-              <h3>기계설계과</h3>
-            </div>
-            <p>CAD 프로그램으로 부품을 그리고 3D 프린터로 직접 출력해 보며 제품 설계 역량을 키웁니다.</p>
-            <ul>
-              <li>주요 자격증: 컴퓨터응용기계제도기능사</li>
-              <li>진로: 설계 · CAD/CAM · 3D 모델링</li>
-            </ul>
-          </article>
-          <article class="dept-card reveal">
-            <div class="dept-head">
-              <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor" aria-hidden="true"><path d="M6.6 11.3 3.4 8.1a5 5 0 0 1 7-7l3.3 3.2a5 5 0 0 1-7 7l1.4-1.4a3 3 0 0 0 4.2-4.2L9 2.5a3 3 0 0 0-4.2 4.2l3.2 3.2zm10.8 1.4 3.2 3.2a5 5 0 0 1-7 7l-3.3-3.2a5 5 0 0 1 7-7l-1.4 1.4a3 3 0 0 0-4.2 4.2l3.3 3.2a3 3 0 0 0 4.2-4.2l-3.2-3.2z"/></svg>
-              <h3>용접과</h3>
-            </div>
-            <p>피복아크, TIG, CO2 용접 등 다양한 용접 기술을 실습하고 특별자격 취득으로 취업 경쟁력을 높입니다.</p>
-            <ul>
-              <li>주요 자격증: 용접기능사</li>
-              <li>진로: 조선 · 중공업 · 건설 플랜트</li>
-            </ul>
-          </article>
-          <article class="dept-card reveal">
-            <div class="dept-head">
-              <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor" aria-hidden="true"><path d="M12 2a2 2 0 0 1 2 2 2 2 0 0 1-1 1.7V8h3a4 4 0 0 1 4 4v1a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-2a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2v-1a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v1a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2v-1a4 4 0 0 1 4-4h3V5.7A2 2 0 0 1 10 4a2 2 0 0 1 2-2z"/></svg>
-              <h3>로봇전자과</h3>
-            </div>
-            <p>전기전자 기초부터 산업용 로봇 제어와 자동화 시스템까지 배워 4차 산업 시대의 기술 인재로 성장합니다.</p>
-            <ul>
-              <li>주요 자격증: 전기기능사</li>
-              <li>진로: 로봇 제어 · 자동화 설비 · 전기</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="checklist-section section" id="checklist">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-tag">CHECKLIST</span>
-          <h2>입학 준비 체크리스트</h2>
-          <p>입학 전 준비할 일을 하나씩 확인하며 완료해 보세요. 체크한 내용은 이 브라우저에 저장됩니다.</p>
-        </div>
-        <div class="checklist-card reveal">
-          <div class="progress-wrap">
-            <div class="progress-bar" id="progressBar"></div>
-            <span class="progress-label" id="progressLabel">0 / 8 완료</span>
-          </div>
-          <ul class="checklist" id="checklist">
-            <li><label><input type="checkbox" id="chk-1" /><span>입학허가서 확인 및 등록금 납부</span></label></li>
-            <li><label><input type="checkbox" id="chk-2" /><span>교복 · 체육복 · 실습복 주문</span></label></li>
-            <li><label><input type="checkbox" id="chk-3" /><span>실습용 안전화 · 안전모 구입 (실습복과 함께 안내)</span></label></li>
-            <li><label><input type="checkbox" id="chk-4" /><span>필통, 공책 등 기본 학용품 준비</span></label></li>
-            <li><label><input type="checkbox" id="chk-5" /><span>급식 신청 및 알레르기 정보 제출</span></label></li>
-            <li><label><input type="checkbox" id="chk-6" /><span>통학 차량 · 기숙사 신청 (필요 시)</span></label></li>
-            <li><label><input type="checkbox" id="chk-7" /><span>신입생 오리엔테이션 일정 확인</span></label></li>
-            <li><label><input type="checkbox" id="chk-8" /><span>건강검진 결과 제출</span></label></li>
+      <div class="cat-grid">
+        <a href="public.html" class="cat-card public">
+          <div class="icon">🏛️</div>
+          <h3>공기업 · 공공기관</h3>
+          <p>발전사, 가스·수자원, 지역 공사 등 안정적인 일자리. NCS 필기와 면접 준비가 핵심입니다.</p>
+          <ul>
+            <li>한국수력원자력</li>
+            <li>한국서부발전</li>
+            <li>부산교통공사</li>
+            <li>K-water</li>
           </ul>
-          <button class="btn btn-ghost btn-reset" id="resetBtn">체크 전체 초기화</button>
+          <div class="go">공기업 준비 바로가기 →</div>
+        </a>
+        <a href="enterprise.html" class="cat-card enterprise">
+          <div class="icon">🏭</div>
+          <h3>대기업</h3>
+          <p>조선·중공업·자동차·철강 등 기계 계열 최대 규모 채용. 인적성검사와 수시채용이 관건입니다.</p>
+          <ul>
+            <li>현대중공업</li>
+            <li>두산에너빌리티</li>
+            <li>현대자동차</li>
+            <li>포스코</li>
+          </ul>
+          <div class="go">대기업 준비 바로가기 →</div>
+        </a>
+        <a href="midsize.html" class="cat-card midsize">
+          <div class="icon">⚙️</div>
+          <h3>중견기업 · 중소기업</h3>
+          <p>부산·경남 지역 기계·설비 기업 중심. 수시채용과 현장실습 연계 채용 기회가 많습니다.</p>
+          <ul>
+            <li>중공업·플랜트</li>
+            <li>자동차 부품</li>
+            <li>기계 부품·설비</li>
+            <li>지역 우수기업</li>
+          </ul>
+          <div class="go">중견기업 준비 바로가기 →</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--white);">
+    <div class="container">
+      <div class="section-title">
+        <h2>3학년 취업 준비 로드맵</h2>
+        <p>시기별로 해야 할 일을 미리 확인하세요</p>
+      </div>
+      <div class="timeline">
+        <div class="step">
+          <b>3월 ~ 5월 · 방향 설정</b>
+          <span>진로 유형 결정, 희망 기업 리스트업, 현장실습 지원, 자기소개서 초안 작성</span>
+        </div>
+        <div class="step">
+          <b>6월 ~ 8월 · 서류 준비</b>
+          <span>자소서·이력서 완성, 자격증 취득(기계설비산업기사 등), 수시채용 지원 시작</span>
+        </div>
+        <div class="step">
+          <b>9월 ~ 11월 · 전형 응시</b>
+          <span>공채·수시 필기(NCS·인적성) 응시, 1:1 면접 연습, 모의면접 참여</span>
+        </div>
+        <div class="step">
+          <b>12월 ~ 2월 · 최종 결정</b>
+          <span>최종 합격 및 입사, 미합격 시 추가 수시채용 지원, 졸업 후에도 응원합니다</span>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="life section" id="life">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-tag">SCHOOL LIFE</span>
-          <h2>부기공의 하루</h2>
-          <p>신입생이 가장 궁금해하는 등교부터 하교까지, 하루 일정을 미리 살펴보세요.</p>
-        </div>
-        <ol class="timeline">
-          <li class="reveal"><span class="time">08:10</span><div><strong>등교 · 아침 인사</strong><p>교문 인사와 함께 하루를 시작합니다.</p></div></li>
-          <li class="reveal"><span class="time">08:30</span><div><strong>조례 · 아침자습</strong><p>담임 선생님과 함께 하루 일정을 확인합니다.</p></div></li>
-          <li class="reveal"><span class="time">09:00</span><div><strong>1~4교시 수업</strong><p>교과 수업 또는 학과별 실습이 진행됩니다.</p></div></li>
-          <li class="reveal"><span class="time">12:30</span><div><strong>점심시간</strong><p>영양사 선생님이 만든 급식을 친구들과 함께 먹습니다.</p></div></li>
-          <li class="reveal"><span class="time">13:30</span><div><strong>5~7교시 수업 · 실습</strong><p>공작기계, CAD, 용접 등 전공 실습의 시간입니다.</p></div></li>
-          <li class="reveal"><span class="time">15:30</span><div><strong>청소 · 하교</strong><p>담당 구역 청소 후 하교합니다.</p></div></li>
-          <li class="reveal"><span class="time">16:00</span><div><strong>방과후 활동 (선택)</strong><p>동아리, 자격증 반, 심화 보충 수업이 운영됩니다.</p></div></li>
-        </ol>
+  <section>
+    <div class="container">
+      <div class="section-title">
+        <h2>어느 유형이 나에게 맞을까?</h2>
+        <p>셋은 경쟁이 아니라 '선택지'입니다. 비교해 보세요</p>
       </div>
-    </section>
-
-    <section class="faq-section section" id="faq">
-      <div class="container container-narrow">
-        <div class="section-head reveal">
-          <span class="section-tag">FAQ</span>
-          <h2>자주 묻는 질문</h2>
-          <p>신입생 여러분이 가장 많이 물어보시는 질문들을 모았습니다.</p>
-        </div>
-        <div class="faq-list">
-          <details class="faq reveal">
-            <summary>실습 수업이 처음인데 따라갈 수 있을까요?</summary>
-            <p>1학년 때는 누구나 처음이라는 전제로 기초 실습부터 시작합니다. 선생님과 선배들이 하나하나 알려 주니 걱정하지 않아도 됩니다.</p>
-          </details>
-          <details class="faq reveal">
-            <summary>교복은 어디서, 언제 주문하나요?</summary>
-            <p>입학 허가 후 안내문에 적힌 지정 복장점에서 주문하면 됩니다. 1월 말부터 2월 초가 가장 여유롭고, 실습복과 안전화는 학교에서 안내해 드립니다.</p>
-          </details>
-          <details class="faq reveal">
-            <summary>여자 학생도 다니나요?</summary>
-            <p>네, 기계 분야에 관심 있는 학생이라면 누구나 환영합니다. 학과별 성비와 상관없이 실습과 동아리 활동이 모두 열려 있습니다.</p>
-          </details>
-          <details class="faq reveal">
-            <summary>대학에 진학할 수도 있나요?</summary>
-            <p>가능합니다. 산업기사 특별전형, 학교장 추천 전형 등을 활용해 연계 대학이나 우수 대학으로 진학하는 학생들이 매년 있습니다.</p>
-          </details>
-          <details class="faq reveal">
-            <summary>핸드폰은 사용할 수 있나요?</summary>
-            <p>등하교 시간에는 사용할 수 있으며, 수업 시간에는 학급별 보관함에 보관합니다. 자세한 기준은 신학기 오리엔테이션에서 안내됩니다.</p>
-          </details>
-          <details class="faq reveal">
-            <summary>급식은 어떻게 신청하나요?</summary>
-            <p>입학 전 안내문에 있는 급식 신청서를 작성해 제출하면 개학부터 이용할 수 있고, 알레르기가 있다면 미리 알려 주세요.</p>
-          </details>
-        </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>구분</th>
+              <th>공기업 · 공공기관</th>
+              <th>대기업</th>
+              <th>중견기업 · 중소기업</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>채용 방식</b></td>
+              <td>정기 공채 중심 (상·하반기)</td>
+              <td>수시채용 중심 + 공채 병행</td>
+              <td>수시채용, 현장실습 연계</td>
+            </tr>
+            <tr>
+              <td><b>필기 전형</b></td>
+              <td>NCS 필수 + 인적성</td>
+              <td>인적성검사 (HOT·직무테스트)</td>
+              <td>간단 필기 또는 서류 위주</td>
+            </tr>
+            <tr>
+              <td><b>특징</b></td>
+              <td>안정성·복리후생 우수, 경쟁률 높음</td>
+              <td>규모·연봉 우수, 기술 성장 기회 많음</td>
+              <td>즉시 채용·실무 중심, 지역 근무 가능</td>
+            </tr>
+            <tr>
+              <td><b>추천 준비</b></td>
+              <td>NCS 꾸준한 학습 + 면접 연습</td>
+              <td>인적성 문제풀이 + 자소서</td>
+              <td>자격증 + 실습 성적 + 즉시 전화 지원</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="location section" id="location">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-tag">LOCATION</span>
-          <h2>오시는 길</h2>
-          <p>궁금한 점은 언제든 학교로 연락 주세요. 입학 담당 선생님이 친절하게 안내해 드립니다.</p>
-        </div>
-        <div class="location-grid">
-          <div class="location-card reveal">
-            <h3>주소</h3>
-            <p>부산광역시 부산진구 개금동</p>
-            <p class="muted">홈페이지 개설 시 실제 도로명 주소로 교체해 주세요.</p>
-          </div>
-          <div class="location-card reveal">
-            <h3>연락처</h3>
-            <p>대표전화 051-000-0000</p>
-            <p>입학문의 051-000-0001</p>
-          </div>
-          <div class="location-card reveal">
-            <h3>대중교통</h3>
-            <p>지하철 1호선 개금역에서 도보 10분</p>
-            <p>버스 개금초등학교 정류장 하차</p>
-          </div>
-        </div>
-        <div class="map-wrap reveal">
-          <iframe
-            src="https://www.google.com/maps?q=%EB%B6%80%EC%82%B0%EA%B8%B0%EA%B3%84%EA%B3%B5%EC%97%85%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90&output=embed"
-            title="부산기계공업고등학교 위치 지도"
-            loading="lazy"
-            allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+  <section style="background: var(--white);">
+    <div class="container">
+      <div class="cta">
+        <h3>면접은 미리 보는 사람이 이깁니다</h3>
+        <p>공기업·대기업 회사별 면접 질문으로 혼자서도 1:1 모의 면접을 진행해 보세요.</p>
+        <a href="interview.html" class="btn">1:1 면접연습 시작하기</a>
+        <a href="public.html" class="btn ghost">진로 정보 보기</a>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer class="footer">
+  <footer class="site-footer">
     <div class="container footer-inner">
-      <p><strong>부산기계공업고등학교</strong></p>
-      <p class="muted">부산광역시 부산진구 개금동 · 051-000-0000</p>
-      <p class="muted">본 페이지는 신입생 안내용 데모 홈페이지입니다. 주소와 연락처는 실제 정보로 교체해 주세요.</p>
+      <div><b>부산기계공업고등학교 취업진로센터</b><br>부산광역시 · 취업지원부 · 진로상담 언제든 환영</div>
+      <div>© <span id="year"></span> Busan Mechanical Technical High School</div>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
