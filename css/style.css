@@ -828,6 +828,37 @@ footer.site-footer {
   min-width: 220px;
 }
 
+.setup-panel .followup-option {
+  min-width: 220px;
+}
+
+.followup-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 9px 12px;
+  border: 2px solid var(--gray-200);
+  border-radius: 10px;
+  color: var(--gray-800);
+  background: var(--white);
+  font-size: 13.5px;
+}
+
+.followup-check input {
+  width: 17px;
+  height: 17px;
+  accent-color: var(--green);
+}
+
+.question-availability {
+  flex-basis: 100%;
+  margin: 0;
+  color: var(--gray-500);
+  text-align: center;
+  font-size: 13px;
+}
+
 .select {
   padding: 12px 14px;
   border: 2px solid var(--gray-200);
@@ -902,6 +933,19 @@ footer.site-footer {
   flex-direction: column;
   gap: 14px;
   background: var(--gray-100);
+}
+
+.retry-wrap {
+  padding: 16px 20px;
+  text-align: center;
+  border-top: 1px solid var(--gray-200);
+  background: var(--white);
+}
+
+.retry-wrap p {
+  margin: 0 0 10px;
+  color: var(--gray-500);
+  font-size: 13px;
 }
 
 .msg {

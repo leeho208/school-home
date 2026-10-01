@@ -32,7 +32,7 @@
     <div class="container">
       <span class="badge">🎙️ 공기업 · 대기업 회사별 모의 면접</span>
       <h1>1:1 모의 면접연습</h1>
-      <p>회사를 선택하면 그 기업에서 자주 묻는 인성·직무 질문으로 면접관 역할을 진행합니다. 답변을 입력하면 모범답변 포인트를 바로 알려드립니다.</p>
+      <p>회사별 질문에 직무·난이도별 질문을 더하고, 답변마다 자기점검과 꼬리질문으로 한 단계 더 깊게 연습합니다.</p>
     </div>
   </section>
 
@@ -46,10 +46,16 @@
               <option value="khnp">한국수력원자력</option>
               <option value="kowepo">한국서부발전 등 발전본부</option>
               <option value="kogas">한국가스공사</option>
+              <option value="kospo">한국남부발전</option>
               <option value="kwater">한국수자원공사 (K-water)</option>
               <option value="humetro">부산교통공사</option>
+              <option value="korail">한국철도공사</option>
+              <option value="bpa">부산항만공사</option>
             </optgroup>
             <optgroup label="대기업" data-group="대기업">
+              <option value="samsung">삼성전자 · 삼성전기</option>
+              <option value="samsung-sdi">삼성SDI</option>
+              <option value="samsung-shi">삼성중공업</option>
               <option value="hdhmc">HD현대중공업</option>
               <option value="ocean">한화오션</option>
               <option value="doosan">두산에너빌리티</option>
@@ -69,6 +75,45 @@
             <option value="직무">직무면접만</option>
           </select>
         </label>
+        <label>
+          집중 직무
+          <select id="roleSelect" class="select">
+            <option value="all">전체 직무</option>
+            <option value="production">생산·공정</option>
+            <option value="maintenance">설비보전</option>
+            <option value="machining">가공·용접</option>
+            <option value="quality">품질·안전</option>
+          </select>
+        </label>
+        <label>
+          질문 난이도
+          <select id="levelSelect" class="select">
+            <option value="all">기본 + 심화</option>
+            <option value="기본">기본 질문</option>
+            <option value="심화">심화·상황 질문</option>
+          </select>
+        </label>
+        <label>
+          질문 수
+          <select id="countSelect" class="select">
+            <option value="5">5문항</option>
+            <option value="10" selected>10문항</option>
+            <option value="20">20문항</option>
+            <option value="all">전체 질문</option>
+          </select>
+        </label>
+        <label>
+          출제 순서
+          <select id="orderSelect" class="select">
+            <option value="random" selected>무작위 (반복 연습 추천)</option>
+            <option value="sequential">순서대로</option>
+          </select>
+        </label>
+        <label class="followup-option">
+          <span>답변 방식</span>
+          <span class="followup-check"><input id="followupSelect" type="checkbox" checked> 답변마다 꼬리질문 받기</span>
+        </label>
+        <p class="question-availability" id="questionAvailability" aria-live="polite"></p>
         <button class="start-btn" id="startBtn">면접 시작하기</button>
       </div>
 
@@ -78,8 +123,12 @@
           <span>진행 <span id="chatProgress"></span> <button class="end-btn" id="endBtn">종료</button></span>
         </div>
         <div class="chat-log" id="chatLog"></div>
+        <div class="retry-wrap" id="retryWrap" style="display: none;">
+          <p>같은 조건으로 다시 시작합니다. 무작위 출제에서는 질문 조합이 새로 바뀝니다.</p>
+          <button class="start-btn" id="retryBtn">같은 조건으로 다시 연습</button>
+        </div>
         <div class="chat-input">
-          <textarea id="answerInput" placeholder="답변을 입력하세요. Enter로 전송, Shift+Enter는 줄바꿈"></textarea>
+          <textarea id="answerInput" placeholder="결론 → 구체적인 경험·행동 → 결과 순으로 답해 보세요. Enter로 전송, Shift+Enter는 줄바꿈"></textarea>
           <button id="sendBtn">전송</button>
         </div>
       </div>
@@ -89,12 +138,12 @@
   <section style="background: var(--white);">
     <div class="container">
       <div class="section-title">
-        <h2>면접 답변 3대 원칙</h2>
-        <p>연습할 때마다 이 원칙을 떠올리세요</p>
+        <h2>답변을 더 구체적으로 만드는 기준</h2>
+        <p>각 답변 뒤에 길이·경험·직무 핵심어를 확인하고 부족한 점을 꼬리질문으로 보완합니다</p>
       </div>
       <div class="tip-grid">
         <div class="tip-card">
-          <h4>1️⃣ 결론 먼저</h4>
+            <h4>1️⃣ 결론과 이유</h4>
           <ul>
             <li>첫 문장에서 답의 핵심을 말하기</li>
             <li>"저는 ○○한 사람입니다" → 이유 → 사례 순</li>
@@ -102,7 +151,7 @@
           </ul>
         </div>
         <div class="tip-card">
-          <h4>2️⃣ 구체적 사례</h4>
+            <h4>2️⃣ 내 행동과 결과</h4>
           <ul>
             <li>'성실합니다'가 아니라 실습·출결·동아리 사례로 증명</li>
             <li>장비명·숫자(공차, 시간)를 넣으면 신뢰도 상승</li>
@@ -110,11 +159,11 @@
           </ul>
         </div>
         <div class="tip-card">
-          <h4>3️⃣ 안전·기본기 어필</h4>
+            <h4>3️⃣ 직무 핵심어</h4>
           <ul>
             <li>기계직 면접은 안전 인식이 곧 직무 이해도</li>
             <li>보호구·점검 습관 등 기본기를 자연스럽게 언급</li>
-            <li>모르는 질문은 아니다라고 솔직히 + 알아가려는 태도</li>
+            <li>공정·설비·안전 질문은 기준과 보고 절차를 구체적으로 언급</li>
           </ul>
         </div>
       </div>
